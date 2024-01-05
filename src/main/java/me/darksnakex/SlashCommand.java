@@ -20,20 +20,18 @@ public class SlashCommand extends ListenerAdapter {
                     try {
                         String result = checkUrl(urlToCheck);
                         if(result == null){
-                            event.getHook().sendMessage("Error, no se ha encontrado ese enlace en la base de datos, vuelve a intentarlo en 1 minuto.").queue();
+                            event.getHook().sendMessage("Error, this link was not found in the database, please try again in 1 minute.").queue();
                         }else{
                             event.getHook().sendMessage(getVirusTotalSummary(result)).queue();
                         }
-                    } catch (IOException e) {
-                        event.getHook().sendMessage("Error al analizar la URL: " + e.getMessage()).queue();
-                    } catch (ParseException e) {
-                        throw new RuntimeException(e);
+                    } catch (IOException | ParseException e) {
+                        event.getHook().sendMessage("Error trying to analyze: " + e.getMessage()).queue();
                     }
                 } else {
-                    event.reply("La URL proporcionada no es válida. Por favor, ingresa una URL válida para analizar.").queue();
+                    event.reply("The URL provided is invalid. Please enter a valid URL to analyze.").queue();
                 }
             } else {
-                event.reply("Debes proporcionar una URL para analizar.").queue();
+                event.reply("You must provide a URL to analyze.").queue();
             }
         }
     }

@@ -1,15 +1,15 @@
 # VirusScannerDiscordBot
-Un bot de discord que utiliza la API de VirusTotal para comprobar si los enlaces pueden ser maliciosos.
+A discord bot that uses the VirusTotal API to check if links may be malicious.
 
-# Descripción
-Este bot analiza todos los mensajes que envían los usuarios y cuando encuentra un enlace lo analiza usando
-la API de Virustotal, tan pronto como haya al menos una indicación de que la URL/enlace que ha pasado puede ser malicioso
-se envía un mensaje al respecto, en caso contrario envía otro mensaje avisando de su aparente fiabilidad.
+# Description
+This bot analyzes all the messages that users sends with the slash command and it analyzes it using
+the Virustotal API, as soon as there is at least an indication that the URL/link you passed may be malicious.
+A message is sent about it, otherwise it sends another message warning of its apparent reliability.
 
-# Requisitos
-- Disponer de una API de Virustotal válida.
-- Tener un token de Discord válido para crear bots.
+# Requirements
+- Have a valid Virustotal API.
+- Have a valid Discord token to create bots.
 
-# Advertencia
-Este bot es puramente educativo para enseñar sobre ciberseguridad en discord y el uso de la API Virustotal en Java.
-También se recuerda que al utilizar la API de Virustotal, todas las URL y archivos que se analizan se almacenan PÚBLICAMENTE en la base de datos de Virustotal, así que tenga cuidado.
+# Warning
+This bot is purely educational to teach about cybersecurity on discord and the use of the Virustotal API in Java.
+Also remember that when using the Virustotal API, all URLs and files that are scanned are stored PUBLICLY in the Virustotal database, so be careful.

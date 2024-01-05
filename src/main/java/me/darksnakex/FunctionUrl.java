@@ -25,12 +25,12 @@ public class FunctionUrl {
             String url = result.split("\"url\":")[1].split(",")[0].trim();
 
             if (positives > 0) {
-                return "La URL " +  url +  " es potencialmente maliciosa, se detectaron " + positives + " amenazas.";
+                return "The website " +  url +  " is potentially malicious, were detected " + positives + " possible threats.";
             } else {
-                return "La URL" +  url + " es segura, no se detectaron amenazas.";
+                return "The website" +  url + " is secure, no threats detected.";
             }
         } else {
-            return "No se pudo obtener la respuesta de VirusTotal.";
+            return "Could not get response from VirusTotal.";
         }
     }
 

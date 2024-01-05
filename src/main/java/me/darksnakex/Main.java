@@ -25,8 +25,8 @@ public class Main extends ListenerAdapter {
                 .build();
 
 
-        jda.upsertCommand("analizar", "Introduce un enlace/url que quieras analizar para ver si es malicioso.")
-                .addOption(OptionType.STRING, "url", "Introduce el enlace/url a escanear")
+        jda.upsertCommand("analyze", "Enter a link/url that you want to analyze to see if it is malicious.")
+                .addOption(OptionType.STRING, "url", "Enter the link/url to scan")
                 .queue();
 
 
